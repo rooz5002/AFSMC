@@ -3,8 +3,8 @@ Adaptive Fuzzy Sliding Mode Trajectory Tracking Control Using Hexagonal Fuzzy Nu
 
 
 AFSMC / HFN-AFSMC Trajectory Tracking Simulator
-Version: 1.3
-Author: Dr. Amir Ali Mokhtarzadeh
+Version: 1.4
+Author: Dr Amir Ali Mokhtarzadeh
 Affiliation: Robotics & AI Laboratory — Huaiyin Institute of Technology
 ===========================================================================================
 ** License **
@@ -19,7 +19,7 @@ file included with this repository.
 ** Disclaimer **
 This software package and its modules are provided for academic research and educational purposes only.
 Not for deployment on real robotic systems without further validation and safety testing.
-No warranties are expressed or implied. Use at your own risk.
+No warranties are expressed or implied. You can use it at your own risk.
 © 2025 Huaiyin Institute of Technology — Robotics & AI Laboratory
 
 
@@ -32,18 +32,18 @@ It provides a graphical control panel (Tkinter-based GUI) for parameter tuning, 
 
 **New in Version 1.4 **
 1- updating controller.py to unified_controller.py and including all algorithms
-2- bringing SMC, AFSMC, and comparisions, all under one gui and all using unified_controller
+2- bringing SMC, AFSMC, and comparisons, all under one GUI and all using unified_controller
 
 
-The package includes:Kinematic/d dynamic robot model (4-wheel omnidirectional).
+The package includes: Kinematic/d dynamic robot model (4-wheel omnidirectional).
 Unified controller (SMC/AFSMC modes with HFN adaptation).
-GUI app for parameter tuning and visualization.
+GUI app for parameter tuning and visualisation.
 Batch analysis for robustness metrics (RMSE, overshoot, chattering, energy).
 
 Features:
 1- Simulation Modes: Single (SMC/AFSMC) or comparison for Case 1 (straight line) and Case 2 (circular trajectory).
 2- Parameter Tuning: Interactive GUI for controller (HFN breakpoints, gains), robot/motor params, cases.
-3- Visualizations: Trajectory, velocities (linear/angular), errors (e_x/e_y/e_θ individual/combined), wheel velocities.
+3- Visualisations: Trajectory, velocities (linear/angular), errors (e_x/e_y/e_θ individual/combined), wheel velocities.
 4- Batch Analysis: Robustness under scenarios (nominal, noise, payload, disturbance); generates tables/CSV (e.g., Table 2).
 5- Outputs: High-res PNG graphs, CSV datasets, performance summaries.
 6- Extensible: Easy to add disturbances or ablate fuzzy types (e.g., triangular).
@@ -63,7 +63,7 @@ Installation & Setup:
 1- Clone/Download: Place files in a dir (e.g., AFSMC/):afsmc_app_x.py (main GUI).
 	afsmc_simulation.py (sim core).
 	unified_controller.py (controller logic).
-	afsmc_plots.py (visualization).
+	afsmc_plots.py (visualisation).
 	gui_frames/ (subdirs with frames: controller_frame.py, etc.).
 	utility_metric.py (metrics for tables; optional).
 
@@ -78,7 +78,7 @@ Open app Tabs:
 	Robot & Motor (geometry/inertia),
 	Case (initial poses/v_cmd),
 	Graphs (select plots),
-	Plot Options (limits/colors).
+	Plot Options (limits/colours).
 Modes:
 	"AFSMC",
 	"SMC",
@@ -105,9 +105,10 @@ Outputs: Individual plots (trajectory, v/ω split, e_x/e_y/e_θ split).
 4. Save/Load Params
 	Save Params: JSON of current settings (controller/robot/case).
 	Load Params: Restore from JSON.
+Note: if you must choose the case before loading a saved JSON file.
 
 5- generating comparison bar graphs:
-python plot_comparison_err.py (require generate two csv files before with graphs:
+Python plot_comparison_err.py (requires generating two CSV files before with graphs:
 	comparision-12-13.csv
 	comparison-afsmc-smc-err.csv)
 
