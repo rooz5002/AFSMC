@@ -1,0 +1,45 @@
+{
+    "controller": {
+        "lambda_": 1.0,
+        "l2": 0.5,
+        "k_I": 0.0,
+        "phi1": 1.0,
+        "phi2": 1.0,
+        "delta": 0.5,
+        "beta_min": 0.5,
+        "beta_max": 3.0,
+        "hfn_breakpoints": [
+            0.0,
+            0.05,
+            0.1,
+            0.15,
+            0.2,
+            0.25
+        ]
+    },
+    "robot": {
+        "mass": 1.8,
+        "length": 0.306,
+        "width": 0.281,
+        "wheel_spacing": 0.287,
+        "wheel_radius": 0.066,
+        "inertia": 1.35
+    },
+    "motor": {
+        "v_max": 3.5,
+        "a_max": 5.0,
+        "zeta": 0.4,
+        "omega_n": 3.0
+    },
+    "case": {
+        "x_ref0": 1.0,
+        "y_ref0": 0.0,
+        "theta_ref0": 1.0472,
+        "x0": 0.5,
+        "y0": 0.0,
+        "theta0": 1.0472,
+        "v_cmd": 2.5,
+        "t_end": 20.0,
+        "dt": 0.01
+    }
+}
